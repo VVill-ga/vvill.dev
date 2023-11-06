@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro&family=Varela+Round&display=swap');
+:root {
+    --code-font: 'Anonymous Pro';
+    --blog-font: 'Varela Round';
+    --0: #282828;
+    --1: #504945;
+    --2: #665c54;
+    --3: #d5c4a1;
+    --accent: #800;
+    --accent-alt: #A00;
+    --secondary: #DA2;
+    --secondary-alt: #DB3;
+    scroll-behavior:smooth;
+}
+body{
+    margin: 0;
+    background: var(--2);
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--0);
+}
+::-webkit-scrollbar-track {
+    background: var(--1);
+    opacity: 0;
+}
+
+.full {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center
+}
+@media (min-aspect-ratio: 3/4) {
+    .full img {
+        width: 100vw;
+    }
+}
+@media (max-aspect-ratio: 3/4) {
+    .full img {
+        height: 100vh;
+    }
+}
+.banner {
+    background: var(--0);
+    display: flex;
+    top: 0;
+    position: -webkit-sticky;
+    position: sticky;
+    z-index: 1;
+    --total-banner-height: 3.5em;
+}
+.banner a {
+    color: var(--3);
+    border-bottom: 0.25em solid var(--1);
+    font-family: var(--blog-font);
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+}
+.banner .active{
+    border-bottom: 0.25em solid var(--3);
+}
+.banner a:hover, .banner a:focus {
+    color: var(--3);
+    text-decoration: underline;
+}
+.banner a h3{
+    font-size: 1.25em;
+    margin: 1em 0;
+    font-weight: bold;
+    height: 1em;
+}
+
+.card {
+    margin: 0 auto;
+    border: 0.125em solid var(--0);
+    border-radius: 1em;
+    box-shadow: 0.125em 0.125em var(--1);
+    width: 80vw;
+    height: calc(80vh - 4.5em);
+    overflow: hidden;
+    background: var(--1);
+    font-family: var(--code-font);
+    color: var(--3);
+}
+.card h1 {
+    font-family: var(--blog-font);
+    background: var(--0);
+    padding: 0.5em;
+    margin: 0;
+    font-size: 2em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.card h1 a{
+    display: inline-block;
+    margin-right: -0.125em;
+}
+.card h1 a img{
+    width: 1.25em;
+    height: 1.25em;
+    display: block;
+}
+.card-index ul {
+    margin: 0;
+    padding: 0;
+    font-family: var(--code-font);
+    height: 1.75em;
+    overflow-y: hidden;
+    position: relative;
+}
+.card-index ul li {
+    display: none;
+    padding: 0.25em;
+    list-style: none;
+    height: 1em;
+    cursor: pointer;
+    border-bottom: 0.125em solid var(--0);
+    background: var(--1);
+}
+.card-index ul li.active {
+    display: list-item;
+    background: var(--0);
+    border-top: 0.125em solid var(--0);
+    font-weight: bold;
+}
+.card-index ul li.active::after{
+    content: "▼";
+    float: right;
+    margin: -0.125em 0; /* Unsure why this is needed to center but it is */
+}
+.card-index ul.active{
+    overflow-y: visible;
+    background: var(--1);
+}
+.card-index ul.active li{
+    display: flow-root;
+}
+
+.card-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(80vh - 10.25em);
+}
+.card-content:not(.active){
+    display:none;
+}
+.card-content img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 0.125em solid var(--0);
+}
+.card-caption {
+    line-height: 1.325;
+    padding: 1em;
+    overflow-y: auto
+}
+.card-caption p {
+    margin: 0;
+}
+.card-buttons {
+    margin: 0.5em 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.card-buttons a {
+    color: var(--1);
+    background: var(--3);
+    border: 0.125em solid var(--3);
+    font-family: var(--blog-font);
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0.25em;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    display: block;
+}
+.card-buttons a:first-child{
+    color: var(--1);
+    background: var(--3);
+    font-family: var(--blog-font);
+    font-size: 1.5em;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    text-decoration: none;
+    font-weight: 600;
+    display: block;
+    margin: 0.25em;
+}
+.card-buttons a:hover {
+    font-weight: bold;
+    background-color: var(--0);
+}
+.card-buttons a:first-child:hover {
+    color: var(--0);
+    text-decoration: underline;
+    background-color: var(--3);
+    border-color: var(--0);
+}
+
+@media (orientation: landscape) {
+    .card-body{
+        display: flex;
+        align-items: center;
+    }
+    .card-index {
+        width: 50%;
+        height: calc(80vh - 8.5em);
+    }
+    .card-index ul {
+        height: 100%;
+        display:flex;
+        flex-direction: column;
+        overflow-y: auto;
+    }
+    .card-index ul li.active::after{
+        content: "▶";
+    }
+    .card-index ul li, .card-index ul li.active {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1em;
+        flex-grow: 1;
+        min-height: 1em;
+    }
+    .card-index ul li:last-child{
+        border-bottom: none;
+    }
+    .card-content {
+        width: 50%;
+        height: calc(80vh - 8.5em);
+        border-left: 0.125em solid var(--0);
+    }
+}
+
+footer{
+    background: var(--0);
+    color: var(--3);
+    padding: 0.5em 1em;
+    font-family: var(--code-font);
+}
+footer p{
+    margin: 0.75em 0;
+    text-align: center;
+}
+footer p a{
+    color: var(--3);
+    font-weight: bold;
+}
