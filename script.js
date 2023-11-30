@@ -6,7 +6,6 @@ let currentCommandId = 0;
 let writing = true;
 let waiting = 0;
 let commandElm;
-
 function updateCommand(){
     let text = commandElm.innerText;
     if(writing){
@@ -39,8 +38,8 @@ function updateCommand(){
 let navBar;
 let positions = [];
 function navScroll(){
-    let i = 0;
-    while(window.scrollY + (window.innerHeight / 2) > positions[i+1])
+    let i = 1; //Set to 1 to skip over gradient hack
+    while(window.scrollY + (window.innerHeight / 2) > positions[i])
         i++;
     if(!navBar.children[i].classList.contains("active")){
         navBar.getElementsByClassName("active")[0].classList.remove("active");
@@ -59,6 +58,12 @@ function swapContent(e, i){
     e.parentElement.children[i].classList.add("active");
 }
 
+//CSS -vh variable for 100% height minus the bottom nav bar on mobile
+function calcVh(){
+	document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + "px");
+}
+
+
 //Load all the element references to memory and start up functions
 window.onload = function(e){
     //Commands bar at the top
@@ -69,9 +74,11 @@ window.onload = function(e){
     //Nav Bar Scroll Highlighting
     navBar = document.getElementById("nav");
     for(let link=navBar.firstChild; link!==null; link=link.nextSibling){
-        if(link.nodeType == 1)
+        if(link.nodeName == 'A')
             positions.push(document.getElementById(link.href.split("#")[1]).offsetTop);
     }
     window.addEventListener("scroll", navScroll, false);
+    window.addEventListener("resize", calcVh, false);
+    calcVh();
     navScroll();
 }

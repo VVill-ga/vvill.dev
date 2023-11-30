@@ -30,6 +30,7 @@ body{
 .full {
     width: 100vw;
     height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
     max-width: 100%;
     overflow: hidden;
     display: flex;
@@ -37,12 +38,13 @@ body{
 }
 @media (min-aspect-ratio: 3/4) {
     .full img {
-        width: 100vw;
+        width: 100%;
     }
 }
 @media (max-aspect-ratio: 3/4) {
     .full img {
-        height: 100vh;
+        height: 100%;
+        height: calc(var(--vh, 1vh) * 100);
     }
 }
 .banner {
@@ -83,6 +85,7 @@ body{
     box-shadow: 0.125em 0.125em var(--1);
     width: 80vw;
     height: calc(80vh - 4.5em);
+    height: calc((var(--vh, 1vh) * 80) - 4.5em);
     overflow: hidden;
     background: var(--1);
     font-family: var(--code-font);
@@ -150,14 +153,17 @@ body{
     align-items: center;
     justify-content: space-between;
     height: calc(80vh - 10.25em);
+    height: calc((var(--vh, 1vh) * 80) - 10.25em);
 }
 .card-content:not(.active){
     display:none;
 }
 .card-content img {
     max-width: 100%;
+    max-height: 50%;
+    width: auto;
     height: auto;
-    border-bottom: 0.125em solid var(--0);
+    border: 0.125em solid var(--0);
 }
 .card-caption {
     line-height: 1.325;
@@ -172,13 +178,13 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    align-items: center;
 }
 .card-buttons a {
-    color: var(--1);
-    background: var(--3);
+    color: var(--3);
     border: 0.125em solid var(--3);
     font-family: var(--blog-font);
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: bold;
     text-decoration: none;
     margin: 0.25em;
@@ -189,14 +195,7 @@ body{
 .card-buttons a:first-child{
     color: var(--1);
     background: var(--3);
-    font-family: var(--blog-font);
-    font-size: 1.5em;
-    padding: 0.25em 0.5em;
-    border-radius: 0.5em;
-    text-decoration: none;
-    font-weight: 600;
-    display: block;
-    margin: 0.25em;
+    font-size: 1.25em;
 }
 .card-buttons a:hover {
     font-weight: bold;
@@ -217,6 +216,7 @@ body{
     .card-index {
         width: 50%;
         height: calc(80vh - 8.5em);
+    	height: calc((var(--vh, 1vh) * 80) - 8.5em);
     }
     .card-index ul {
         height: 100%;
@@ -241,10 +241,31 @@ body{
     .card-content {
         width: 50%;
         height: calc(80vh - 8.5em);
+    	height: calc((var(--vh, 1vh) * 80) - 8.5em);
         border-left: 0.125em solid var(--0);
     }
 }
-
+@media (max-height: 600px){
+    .card{
+        width: 90vw;
+        height: calc(90vh - 4.5em);
+    	height: calc((var(--vh, 1vh) * 90) - 4.5em);
+    }
+    .card-content{
+        height: calc(90vh - 10.25em);
+    	height: calc((var(--vh, 1vh) * 90) - 10.25em);
+    }
+    @media (orientation: landscape) {
+        .card-content {
+            height: calc(90vh - 8.5em);
+    		height: calc((var(--vh, 1vh) * 90) - 8.5em);
+        }
+        .card-index {
+            height: calc(90vh - 8.5em);
+    		height: calc((var(--vh, 1vh) * 90) - 8.5em);
+        }
+    }
+}
 footer{
     background: var(--0);
     color: var(--3);
