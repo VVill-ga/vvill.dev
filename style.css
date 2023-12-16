@@ -64,11 +64,11 @@
     transform: translate(-50%, -50%);
     top: 50vh;
     backdrop-filter: blur(1em);
-    border: 0.25em solid var(--3);
+    border: 0.25em solid var(--0);
     padding: 1em;
     color: var(--3);
     text-shadow: 3px 1px var(--0);
-    box-shadow: 4px 4px var(--0);
+    box-shadow: 3px 3px black;
     border-radius: 2em;
     font-family: var(--code-font);
     text-align: center;
@@ -81,6 +81,21 @@
 }
 #construction p {
     margin: 0.5em 0;
+}
+#construction a {
+    color: var(--3);
+    border: 0.125em solid var(--0);
+    font-family: var(--blog-font);
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0em auto;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    display: block;
+    width: fit-content;
+    background: var(--0);
+    box-shadow: 2px 2px black;
 }
 #construction:last-child {
     margin-bottom: 0;
