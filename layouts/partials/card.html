@@ -1,0 +1,51 @@
+<div id="{{ .LinkTitle }}" class="full">
+    <div class="card">
+        <h1>
+            {{ .LinkTitle }}
+            <div>
+                <a onclick="alert('Search not yet implemented');"><img src="search.webp"></a>
+                <a href="/rss.xml" target="_blank"><img src="rss.webp"></a>
+            </div>
+        </h1>
+        <div class="card-body">
+            <div class="card-index">
+                <ul>
+                    {{ $pages := where .Site.RegularPages "Section" .LinkTitle }}
+                    {{ $pages = $pages.ByLastmod }}
+                    {{ $index := 0 }}
+                    {{ range $index, $element := (.Paginate $pages).Pages }}
+                        <li onclick="swapContent(this, {{ $index }});" {{ if eq $index 0 }}class="active"{{ end }}>{{$element.Title}}</li>
+                    {{ end }}
+                </ul>
+            </div>
+            {{ $index = 0 }}
+            {{ range $index, $element := (.Paginate $pages).Pages }}
+                <div class="card-content {{ if eq $index 0 }}active{{ end }}">
+                {{ if $element.Params.image }}
+                    <img src="{{$element.Params.image}}">
+                {{ end }}
+                <div class="card-caption">
+                    {{if $element.Description}}
+                        <p>
+                            {{ range $element.Description }}
+                                {{ . }} <br><br>
+                            {{ end }}
+                        </p>
+                    {{ else }}
+                        <p>
+                            {{ $element.Summary }}
+                        </p>
+                    {{ end }}
+                </div>
+                <div class="card-buttons">
+                    {{ if  not $element.Params.nopage }}
+                        <a href="{{ $element.RelPermalink }}">Read More</a>
+                    {{ end }}
+                    {{ range $element.Params.links }}
+                        <a href="{{ .link }}" target="_blank">{{ .text }}</a>
+                    {{ end }}
+                </div>
+            {{ end }}
+        </div>
+    </div>
+</div>

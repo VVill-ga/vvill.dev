@@ -1,0 +1,9 @@
+baseURL: https://vvill.dev
+languageCode: en-us
+params:
+  contact:
+    email: contact@vvill.dev
+    phone: +1 360-391-9285
+  subtitle: Software Engineering Student at Oregon State | ASOSU VP Candidate
+title: Will Garrison
+enableGitInfo: true

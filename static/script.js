@@ -1,6 +1,6 @@
 //Funny little command ticker at the top of the page
-const WAITTIME = 10;
-const TYPESPEED = 50;
+const WAITTIME = 10;    //ms between characters
+const TYPESPEED = 50;   //# of waittimes between writing and deleting
 const COMMANDS = ["neofetch", "cowsay \"Hello World\"", "cargo run", "ping vvill.dev", "sudo rm -rf --no-preserve-root /", "sudo pacman -Syu", "echo Go Beavs", "git commit -am \"I did a thing\"", "pandoc a.md -o a.pdf", "man man", "systemctl list services", ":(){ :|:& };:", "sudo nvim -b /bin/bash", "nvim +q"];
 let currentCommandId = 0;
 let writing = true;
@@ -51,9 +51,20 @@ function navScroll(){
 function swapContent(e, i){
     if(window.innerHeight > window.innerWidth){
         e.parentElement.classList.toggle("active");
+        //Hide image when scrolling through post titles, to make room for list
+        if(e.parentElement.classList.contains("active")){
+            e.parentElement.parentElement.parentElement.getElementsByClassName("card-content active")[0].classList.toggle("half");
+            let img = e.parentElement.parentElement.parentElement.getElementsByClassName("card-content active")[0].children[0];
+            //Not always an image
+            if(img.tagName == 'IMG'){
+                img.classList.toggle("hidden");
+            }
+        }
     }
+    //Toggle post content
     e.parentElement.parentElement.parentElement.getElementsByClassName("card-content active")[0].classList.remove("active");
     e.parentElement.parentElement.parentElement.getElementsByClassName("card-content")[i].classList.add("active");
+    //Toggle post title
     e.parentElement.getElementsByClassName("active")[0].classList.remove("active");
     e.parentElement.children[i].classList.add("active");
 }

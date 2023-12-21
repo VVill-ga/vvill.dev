@@ -15,6 +15,10 @@
     float: left;
     white-space: nowrap;
 }
+#top-bar h1 a{
+    color: var(--0);
+    text-decoration: none;
+}
 #commandsWrapper{
     flex-grow: 1;
     overflow: hidden;
@@ -58,7 +62,7 @@
     border-bottom: dotted 0.25em var(--1);
 }
 
-#construction {
+#message {
     position: absolute;
     left: 50vw;
     transform: translate(-50%, -50%);
@@ -74,15 +78,15 @@
     text-align: center;
     font-size: larger;
 }
-#construction h1 {
+#message h1 {
     margin-top: 0em;
     font-family: var(--blog-font);
     line-height: normal;
 }
-#construction p {
+#message p {
     margin: 0.5em 0;
 }
-#construction a {
+#message a {
     color: var(--3);
     border: 0.125em solid var(--0);
     font-family: var(--blog-font);
@@ -97,6 +101,6 @@
     background: var(--0);
     box-shadow: 2px 2px black;
 }
-#construction:last-child {
+#message:last-child {
     margin-bottom: 0;
 }

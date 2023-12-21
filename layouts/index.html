@@ -1,0 +1,30 @@
+{{ define "main" }}
+    <div id="top" class="full">
+        <img src="wallpaper.webp">
+        <div id="top-bar">
+          <h1><a href="https://vvill.dev">[vvill.dev] $</a></h1>
+          <div id="commandsWrapper">
+            <h1 id="commands"></h1>
+          </div>
+          <div id="socials">
+            <a href="mailto:contact@vvill.dev" target="_blank"><img src="email.webp"></a>
+            <a href="https://www.linkedin.com/in/vvill-ga" target="_blank"><img src="linkedin.webp"></a>
+            <a href="https://gitlab.com/vvill.ga" target="_blank"><img src="gitlab.webp"></a>
+            <a href="https://github.com/VVill-ga" target="_blank"><img src="github.webp"></a>
+          </div>
+        </div>
+        <div id="message">
+          {{ .Content }}
+        </div>
+    </div>
+    <div id="nav" class="banner">
+      <div id="gradient"></div>
+      <a href="#top" class="active"><h3>Top</h3></a>
+      {{ range .Site.Sections }}
+        <a href="#{{ .LinkTitle }}"><h3>{{ .LinkTitle }}</h3></a>
+      {{ end }}
+    </div>
+    {{ range .Site.Sections }}
+      {{ partial "card.html" . }}
+    {{ end }}
+{{ end }}
