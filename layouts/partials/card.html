@@ -3,15 +3,13 @@
         <h1>
             {{ .Title | emojify }}
             <div>
-                <a onclick="alert('Search not yet implemented');"><img src="search.webp"></a>
-                <a href="/rss.xml" target="_blank"><img src="rss.webp"></a>
+                <a onclick="alert('Search not yet implemented');"><img src="/search.webp"></a>
+                <a href="/rss.xml" target="_blank"><img src="/rss.webp"></a>
             </div>
         </h1>
         <div class="card-body">
             <div class="card-index">
                 <ul>
-                    {{ $pages := where .Site.RegularPages "Section" .LinkTitle }}
-                    {{ $pages = $pages.ByLastmod }}
                     {{ $index := 0 }}
                     {{ range $index, $element := .Pages }}
                         <li onclick="swapContent(this, {{ $index }});" {{ if eq $index 0 }}class="active"{{ end }}>{{$element.Title | emojify}}</li>
