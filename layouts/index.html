@@ -21,7 +21,7 @@
       <div id="gradient"></div>
       <a href="#top" class="active"><h3>Top</h3></a>
       {{ range .Site.Sections }}
-        <a href="#{{ .LinkTitle }}"><h3>{{ .LinkTitle }}</h3></a>
+        <a href="#{{ lower .Title }}"><h3>{{ .Title | emojify }}</h3></a>
       {{ end }}
     </div>
     {{ range .Site.Sections }}

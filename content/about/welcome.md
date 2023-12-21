@@ -1,7 +1,7 @@
 ---
-title: :wave:Welcome!
+title: ":wave: Welcome!"
 image: /img/welcome.webp
-description: 
+desc: 
         - >-
           My name is Will, it's nice to meet you! Or, nice to have you meet me. 
           I am a Junior and self-proclaimed 'Student Leader' studying Computer Science at Oregon State University. Go Beavs! 
@@ -16,4 +16,5 @@ nopage: true
 links: 
     - link: mailto:contact@vvill.dev 
       text: contact@vvill.dev
+weight: 1
 ---

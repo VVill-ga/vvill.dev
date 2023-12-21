@@ -7,3 +7,5 @@ params:
   subtitle: Software Engineering Student at Oregon State | ASOSU VP Candidate
 title: Will Garrison
 enableGitInfo: true
+pluralizelisttitles: false
+enableEmoji: true
