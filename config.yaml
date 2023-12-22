@@ -1,4 +1,5 @@
 baseURL: https://vvill.dev
+publishDir: /etc/www/vvill/
 languageCode: en-us
 params:
   contact:
