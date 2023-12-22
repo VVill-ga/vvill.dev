@@ -45,6 +45,12 @@ self, so I wanted
 
 ### Other Features
 
+```js
+function calcVh(){
+	document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + "px");
+}
+```
+
 ## Future Plans
 
 ### Search/Filter Posts

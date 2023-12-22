@@ -14,6 +14,8 @@ desc:
 enabelEmoji: true
 nopage: true
 links: 
+    - link: /resume.pdf
+      text: My Resume
     - link: mailto:contact@vvill.dev 
       text: contact@vvill.dev
 weight: 1

@@ -1,0 +1,106 @@
+#top-bar{
+    width: calc(100% - 2em);
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    display: flex;
+    justify-content: space-between;
+}
+#top-bar h1{
+    font-family: var(--blog-font);
+    font-weight: 100;
+    color: var(--0);
+    margin: 0;
+    margin-right: 0.5em;
+    float: left;
+    white-space: nowrap;
+}
+#top-bar h1 a{
+    color: var(--0);
+    text-decoration: none;
+}
+#commandsWrapper{
+    flex-grow: 1;
+    overflow: hidden;
+}
+#commands::after{
+    content: '|';
+}
+#socials {
+    float: right;
+    display:flex;
+}
+@media (orientation: landscape){
+    #socials{
+        flex-direction: row;
+    }
+    #socials img{
+        margin-left: 0.5em;
+    }
+}
+@media (orientation: portrait){
+    #socials{
+        flex-direction: column;
+    }
+    #socials img{
+        margin-bottom: 0.5em;
+    }
+}
+#socials img {
+    width: 3em;
+    height: 3em;
+}
+#gradient {
+    position: absolute;
+    bottom: var(--total-banner-height);
+    width: 100%;
+    height: 10vh;
+    background: linear-gradient(0deg, var(--0), transparent);
+}
+
+#about, #projects {
+    border-bottom: dotted 0.25em var(--1);
+}
+
+#message {
+    position: absolute;
+    left: 50vw;
+    transform: translate(-50%, -50%);
+    top: 50vh;
+    backdrop-filter: blur(1em);
+    border: 0.25em solid var(--0);
+    padding: 1em;
+    color: var(--3);
+    text-shadow: 3px 1px var(--0);
+    box-shadow: 3px 3px black;
+    border-radius: 2em;
+    font-family: var(--code-font);
+    text-align: center;
+    font-size: larger;
+}
+#message h1 {
+    margin-top: 0em;
+    font-family: var(--blog-font);
+    line-height: normal;
+}
+#message p {
+    margin: 0.5em 0;
+}
+#message a {
+    color: var(--3);
+    border: 0.125em solid var(--0);
+    font-family: var(--blog-font);
+    font-size: 1em;
+    font-weight: bold;
+    text-decoration: none;
+    margin: 0em auto;
+    padding: 0.25em 0.5em;
+    border-radius: 0.5em;
+    display: block;
+    width: fit-content;
+    background: var(--0);
+    box-shadow: 2px 2px black;
+}
+#message:last-child {
+    margin-bottom: 0;
+}

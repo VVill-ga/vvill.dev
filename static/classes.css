@@ -105,6 +105,9 @@ body{
     align-items: center;
     justify-content: space-between;
 }
+.card h1 div{
+    display: flex;
+}
 .card h1 a{
     display: inline-block;
     margin-right: -0.125em;
