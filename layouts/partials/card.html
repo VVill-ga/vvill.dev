@@ -26,7 +26,7 @@
                         {{if $element.Params.desc}}
                             <p>
                                 {{ range $element.Params.desc }}
-                                    {{ . | emojify }} <br><br>
+                                    {{ . | emojify | markdownify }} <br><br>
                                 {{ end }}
                             </p>
                         {{ else }}
