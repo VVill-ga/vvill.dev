@@ -11,6 +11,7 @@
         <img src="{{.Params.image}}">
     {{ end }}
     <div id="content">
+        <h1>{{ .Title | emojify }}</h1>
         {{ .Content }}
     </div>
 {{ end }}

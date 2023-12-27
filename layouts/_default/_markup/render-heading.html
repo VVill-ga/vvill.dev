@@ -1,0 +1,7 @@
+<h{{ .Level }} id="{{ .Anchor | safeURL }}">
+    {{ if not .Page.IsHome }}
+        <a href="#{{ .Anchor | safeURL }}">{{ .Text | safeHTML }}</a>
+    {{ else }}
+        {{ .Text | safeHTML }}
+    {{ end }}
+</h{{ .Level }}>

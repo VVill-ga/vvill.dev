@@ -38,30 +38,59 @@ img:not(.card img) {
     font-family: var(--blog-font);
 
     h1, h2, h3, h4, h5{
+        a{
+            font-style: normal;
+            text-decoration: none;
+        }
         text-align: center;
-        margin: 0.5em auto;
+        margin: 1.5em auto;
         background: var(--1);
         padding: 0.25em 0.5em;
         border-top: 0.125em solid var(--0);
         border-bottom: 0.25em solid var(--0);
     }
+    h3, h4, h5{
+        width: fit-content;
+        border: 0.125em solid var(--0);
+        border-bottom: 0.25em solid var(--0);
+    }
+    hr{
+        border: none;
+        border-bottom: 0.25em dotted var(--1);
+    }
     p{
-        margin: 2em;
+        margin: 1em auto;
         padding: 1em;
         border-radius: 1em;
         background: var(--1);
         border: 0.125em solid var(--0);
+        width: fit-content;
+        max-width: calc(80vw - 2.25em);
+    }
+    code{
+        font-family: var(--code-font);
+    }
+    a{
+        color: var(--3);
+        font-style: italic;
     }
     img{
-        width: calc(100% - 6em);
-        margin: 1em 3em;
+        width: calc(80vw - 0.5em);
         border-radius: 2em;
         border: 0.25em solid var(--0);
     }
+    p:has(img){
+        max-width: 80vw;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+    }
     .highlight{
-        width: calc(100% - 6em);
+        width: fit-content;
+        max-width: calc(80vw - 2.25em);
         overflow-x: auto;
-        margin: 0 2em;
+        margin: 1em auto;
         padding: 1em;
         background: var(--0);
         border-radius: 1em;
@@ -70,8 +99,13 @@ img:not(.card img) {
     .highlight *{
         margin: 0;
         width: fit-content;
+        background: transparent !important;
     }
     .highlight::-webkit-scrollbar{
         display: none;
+    }
+    .highlight pre{
+        color: revert !important;
+        background-color: revert !important;
     }
 }

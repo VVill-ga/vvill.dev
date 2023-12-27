@@ -13,7 +13,7 @@ desc:
         - >-
           This year I am running for Vice-President of the Associated 
           Students of Oregon State University. Once the campaign period 
-          starts, you can learn more about this venture at OpenOSU.org.
+          starts, you can learn more about this venture at the link below.
 
 enabelEmoji: true
 nopage: true
