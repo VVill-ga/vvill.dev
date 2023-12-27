@@ -28,7 +28,7 @@ This website has been a work in progress since... At least back in 2019.
 It may not look like that much, because really it's not. The biggest challange
 that I found in the "building a personal website" project wasn't the website
 itself, but making it personal. This version took me a couple months to figure
-out. However, on the way I went through many learning curves of trying on 
+out. However, along the way I went through many learning curves of trying on 
 different outfits, different styles, and different frameworks, some of which 
 I'll share as screenshots below. 
 
@@ -37,17 +37,18 @@ I'll share as screenshots below.
 ![](/img/garrisow_screenshot.webp "Website published to my school account")
 
 The first image, which sports the header "vvill.ga", was one of my more
-ecentric attempts at designing my website from when I was in high school.
-The binary in the background is programmed to repeat until it goes off screen,
-and it decodes to "PRESS SHIFT SPACE". My plan was to have shift+space switch
-the screen to a video game with javascript and a canvas element (my bread & 
-butter at the time) that would act as an alternative way to move between posts.
+ecentric designs I created back in high school. The binary in the background is 
+programmed to repeat until it goes off screen, and it decodes to "PRESS SHIFT 
+SPACE". My plan was to have shift+space redirect to a video game made with 
+Javascript and a canvas element (my bread & butter at the time) which would act 
+as an alternative way to move between posts.
 \
 \
 The second image is the homepage I created for my server space at Oregon State
-University. It was written near the end of 2021 and is still hosted [here.](https://web.engr.oregonstate.edu/~garrisow)
-It was created as a portfolio site like vvill.dev is now, as a week-long final
-project for an introduction to engineering class. CSS was not in the rubric...
+University. It was originally written near the end of 2021 and is still hosted 
+[here](https://web.engr.oregonstate.edu/~garrisow).  It was created to be a 
+portfolio site like vvill.dev is now, as a week-long final project for an 
+introduction to engineering class. CSS was not in the rubric...
 
 ### VVill.ga
 
@@ -61,14 +62,16 @@ purchase of vvill.dev in August of 2023.
 
 ---
 
-**P.S.** If you're in the market for a free domain name to get your project 
-started, the website you are looking for is **[Freenom](https://www.freenom.com)**. 
-Just know that their registration side of things goes down quite often and they 
-have been known to take down highly-active domains. 
+**P.S.** The website I used to get my free domain was [Freenom](https://www.freenom.com). 
+Unfortunetly, in March of 2023, they were sued by Meta and were forced to stop
+allowing new domains to be registered. Someone posted an [alternatives list](https://www.reddit.com/r/freenom/comments/16kwmm2/alternatives_to_freenom_megalist/) 
+to the Freenom subreddit for other opportunities to get a free domain name, and 
+I'm particularily fond of the github subdomain options. Any option here will 
+give you limited control and reliability however.
 \
 \
-A paid domain is only about $10 a year though, which I'd suggest moving to as 
-soon as you can. My prefered domain registrar is **[Cloudflare](https://cloudflare.com)**
+A paid domain is only about $10 a year, which I'd suggest moving to as soon as 
+you can. My prefered domain registrar is **[Cloudflare](https://cloudflare.com)**
 because they are (to my knowledge) the only ones who don't charge any extra
 registration fees. The "tradeoff" is that you have to use their DNS for your 
 domain, but that would have been a no-brainer anyways.
@@ -77,7 +80,7 @@ domain, but that would have been a no-brainer anyways.
 ## Site Structure
 
 If you'd like to read the code that makes up this website, you're in luck! 
-All of my code is GNU GPL licensed and hosted on my [Github](https://github.com/VVill-ga/vvill.dev).
+All of my code is GNU GPL licensed and hosted on [Github](https://github.com/VVill-ga/vvill.dev).
 I wrote a README.md file that should walk you through the purpose of each folder
 and file if you are not familiar with Hugo websites. Please read my code and 
 learn from it. If you have any questions or suggestions, leave an issue and I'll 
@@ -86,7 +89,7 @@ get back to you as soon as I can!
 ### Home Page
 
 Compiled, the home page looks like quite big, but it's really just a sum of
-parts. For example, the cards for About, Projects, and Blog are each compiled in
+parts. For example, the cards for About, Projects, and Blog are each brought in
 from the card partial file which I'll talk about next. The footer is also a 
 partial, as is the head tag, so they are reused across all pages on my site.
 \
@@ -94,7 +97,7 @@ partial, as is the head tag, so they are reused across all pages on my site.
 The first thing you'll notice looking at the home page is the full screen
 backdrop, or "hero image". I took that on top of a ridge just outside Corvallis, 
 Oregon! I wanted to pin this image on the center of the left edge of the screen,
-so that the gravel road would always be on screen. This was pretty simple, with 
+so that the gravel road would always be visible. This was pretty simple, with 
 a full-width div with `display: flex` and `align-items: center`. The message in
 the middle of the screen is pretty cool looking too, and that's just the css 
 `backdrop-filter: blur(1em)` at work, with a border-radius and box-shadow to
@@ -129,20 +132,20 @@ you can click on to expand the list and chose from the various post titles. On a
 landscape screen, the items all fall down to the left of the post summary, and 
 you can simply click on each title to see more. It is also programmed such that
 once I have thousands of projects to show off and blog posts written, you can 
-scroll through the options on the dropdown or in the left pannel to see all the 
-well spaced options.
+scroll down in the dropdown or in the left pannel to see all the well spaced 
+options.
 \
 \
-All of the content is made in a Hugo for loop that is defined within the html
-file to pull out and organize all the neccessary information about each post.
-There is one simple JavaScript function I wrote to handle the switching of 
-content and the dropdown menu.
+Everything gets defined in a Hugo for loop in the html file which pulls out and 
+organizes all the neccessary information about each post. There is one simple 
+JavaScript function I wrote to handle the switching of content and the dropdown 
+menu.
 \
 \
 In addition to the home page, the card partial also makes an appearance on the 
 never-linked-to list page. If you remove the last part from this url (i.e. go to
 [vvill.dev/projects](/projects)), you'll find a page similar to the post page,
-but with just one card on it which shows off all my projects.
+but with a card on it which shows off all my projects.
 
 ### Post Page
 
@@ -272,7 +275,14 @@ me add variables like `nopage` which my template uses to decide if it should add
 a "Read More" button when showing off the post (This is used in my about section 
 posts).
 
+
 ## Future Plans
+
+This website will always be a work in progress, from content updates to easter
+eggs or even complete redesigns, I see myself making many modifications in the
+future. A lot of my plans include self-hosting popular communication software
+like [Jitsi](https://jitsi.org) and [Matrix](https://matrix.org) for personal 
+use. I do have some ideas specifically relevant to the website though.
 
 ### Search/Filter Posts
 
