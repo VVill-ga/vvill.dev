@@ -2,16 +2,19 @@
 title: ":spider_web: This Website"
 image: /img/website.webp
 desc: 
-        - >-
-          In short, a handwritten site with a Gruvbox like theme, statically 
-          compiled by Hugo, hosted by Caddy on an Arch Linux VPS, with DNS and 
-          traffic routed through Cloudflare.
+    - >-
+        In short, a handwritten site with a Gruvbox like theme, statically 
+        compiled by Hugo, hosted by Caddy on an Arch Linux VPS, with DNS and 
+        traffic routed through Cloudflare.
 
-        - >-
-          This website has been a work in progress for many years, and has
-          gone through many a wardrobe change. I'll talk about my favorite
-          features, design principles I followed, and my plans for the future.
+    - >-
+        This website has been a work in progress for many years, and has
+        gone through many a wardrobe change. I'll talk about my favorite
+        features, design principles I followed, and my plans for the future.
 
+tags:
+    - Webdev
+    - vvill.dev
 enabelEmoji: true
 links: 
     - link: https://github.com/VVill-ga/vvill.dev
