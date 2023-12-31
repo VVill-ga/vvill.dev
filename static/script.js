@@ -81,18 +81,22 @@ function calcVh(){
 //Load all the element references to memory and start up functions
 window.onload = function(e){
     //Commands bar at the top
-    commandElm = document.getElementById("commands");
-    currentCommandId = Math.floor(Math.random()*COMMANDS.length);
-    setInterval(updateCommand, TYPESPEED);
+    if(commandElm = document.getElementById("commands")){
+        currentCommandId = Math.floor(Math.random()*COMMANDS.length);
+        setInterval(updateCommand, TYPESPEED);
+    }
     
     //Nav Bar Scroll Highlighting
-    navBar = document.getElementById("nav");
-    for(let link=navBar.firstChild; link!==null; link=link.nextSibling){
-        if(link.nodeName == 'A')
-            positions.push(document.getElementById(link.href.split("#")[1]).offsetTop);
+    if(navBar = document.getElementById("nav")){
+        for(let link=navBar.firstChild; link!==null; link=link.nextSibling){
+            if(link.nodeName == 'A')
+                positions.push(document.getElementById(link.href.split("#")[1]).offsetTop);
+        }
+        window.addEventListener("scroll", navScroll, false);
+        navScroll();
     }
-    window.addEventListener("scroll", navScroll, false);
+
+    //Dynamic vh variable
     window.addEventListener("resize", calcVh, false);
     calcVh();
-    navScroll();
 }
