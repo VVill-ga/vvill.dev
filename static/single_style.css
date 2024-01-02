@@ -32,18 +32,22 @@
 #imgWrapper{
     width: 100%;
     background: var(--0);
+    border-bottom: 0.25em solid var(--1);
 }
 #imgWrapper img{
     display: block;
     margin: 0 auto;
     max-width: 100%;
     max-height: calc(var(--vh, 1vh) * 50);
-    border-bottom: 0.25em solid var(--0);
+}
+#container{
+    display:flex;
 }
 #content{
     margin-bottom: 5em;
     color: var(--3);
     font-family: var(--blog-font);
+    width: 70%;
 
     h1, h2, h3, h4, h5{
         a{
@@ -58,7 +62,7 @@
         border-bottom: 0.25em solid var(--0);
     }
     h3, h4, h5{
-        margin-top: 5em;
+        margin-top: 3em;
         width: fit-content;
         border: 0.125em solid var(--0);
         border-bottom: 0.25em solid var(--0);
@@ -74,7 +78,7 @@
         background: var(--1);
         border: 0.125em solid var(--0);
         width: fit-content;
-        max-width: calc(80vw - 2.25em);
+        max-width: calc(50vw - 2.25em);
     }
     ul:not(li ul){
         padding-left: 40px;
@@ -85,13 +89,13 @@
         font-style: italic;
     }
     img{
-        max-width: calc(80vw - 0.5em);
+        max-width: calc(50vw - 0.5em);
         max-height: 70vh;
         border-radius: 2em;
         border: 0.25em solid var(--0);
     }
     p:has(img){
-        max-width: 80vw;
+        max-width: 50vw;
         padding: 0;
         border: none;
         border-radius: 0;
@@ -102,7 +106,7 @@
     }
     pre {
         width: fit-content;
-        max-width: calc(80vw - 2.25em);
+        max-width: calc(50vw - 2.25em);
         overflow-x: auto;
         margin: 1em auto;
         padding: 1em;
@@ -118,5 +122,57 @@
     }
     pre::-webkit-scrollbar{
         display: none;
+    }
+}
+#sidebar{
+    width: 30%;
+    background: var(--0);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 4.625em;
+    height: calc(var(--vh, 1vh) * 100);
+    border-left: 0.25em solid var(--1);
+
+    h1{
+        text-align: center;
+        margin: 0;
+        padding: 0.5em;
+        color: var(--3);
+        font-family: var(--blog-font);
+    }
+    hr{
+        border: none;
+        border-bottom: 0.25em dotted var(--3);
+    }
+    p{
+        font-family: var(--blog-font);
+        color: var(--3);
+        text-align: center;
+        margin: 2em;
+    }
+    .card-buttons a:first-child{
+        color: var(--3);
+        background:transparent;
+        font-size: 1em;
+
+    }
+}
+@media (orientation: portrait) {
+    #container{
+        flex-direction: column-reverse;
+    }
+    #content{
+        width: 100%;
+    }
+    #sidebar{
+        width: 100%;
+        height: 4.5em;
+        border: none;
+        border-bottom: 0.25em solid var(--1);
+        overflow: hidden;
+        position: static;
+    }
+    #imgWrapper{
+        border: none;
     }
 }

@@ -10,8 +10,31 @@
     {{ if .Params.image }}
         <div id="imgWrapper"><img src="{{.Params.image}}"></div>
     {{ end }}
-    <div id="content">
-        <h1>{{ .Title | emojify }}</h1>
-        {{ .Content }}
+    <div id="container">
+        <div id="content">
+            {{ .Content }}
+        </div>
+        <div id="sidebar">
+            <h1>{{ .Title | emojify }}</h1>
+            <hr>
+            {{if .Params.desc}}
+                <p>
+                {{ range .Params.desc }}
+                    {{ . | emojify | markdownify }} <br><br>
+                {{ end }}
+                </p>
+            {{ else }}
+                <p>
+                    {{ .Summary | emojify }}
+                </p>
+            {{ end }}
+            <div class="card-buttons">
+            {{ range .Params.links }}
+                <a href="{{ .link }}" target="_blank">{{ .text }}</a>
+            {{ end }}
+            </div>
+            <p>Published: {{ .Date | time.Format "1/2/2006"}}</p>
+            <p><em>More Useful Sidebar Coming Soon...</em></p>
+        </div>
     </div>
 {{ end }}
