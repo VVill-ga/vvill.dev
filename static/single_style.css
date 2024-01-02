@@ -163,6 +163,19 @@
     }
     #content{
         width: 100%;
+
+        p, ul:not(li ul){
+            max-width: calc(80vw - 2.25em);
+        }
+        img{
+            max-width: calc(80vw - 0.5em);
+        }
+        p:has(img){
+            max-width: 80vw;
+        }
+        pre{
+            max-width: calc(80vw - 2.25em);
+        }
     }
     #sidebar{
         width: 100%;
