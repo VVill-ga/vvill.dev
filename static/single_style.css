@@ -123,6 +123,9 @@
     pre::-webkit-scrollbar{
         display: none;
     }
+    .highlight{
+        position: static;
+    }
 }
 #sidebar{
     width: 30%;
