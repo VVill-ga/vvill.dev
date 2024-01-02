@@ -15,7 +15,6 @@ desc:
 tags:
     - C/C++
     - Graphics
-enabelEmoji: true
 links: 
     - link: #
       text: Github Repo

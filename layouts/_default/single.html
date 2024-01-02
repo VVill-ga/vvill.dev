@@ -8,7 +8,7 @@
         </div>
     </div>
     {{ if .Params.image }}
-        <img src="{{.Params.image}}">
+        <div id="imgWrapper"><img src="{{.Params.image}}"></div>
     {{ end }}
     <div id="content">
         <h1>{{ .Title | emojify }}</h1>

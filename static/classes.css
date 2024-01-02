@@ -145,8 +145,7 @@ body{
 .card-index ul.active{
     overflow-y: auto;
     background: var(--1);
-    height: calc((80vh - 10.25em) / 2);
-    height: calc(((var(--vh, 1vh) * 80) - 10.25em) / 2);
+    height: calc(40vw + 1.875em);
 }
 .card-index ul.active li{
     display: flow-root;
@@ -161,8 +160,8 @@ body{
     height: calc((var(--vh, 1vh) * 80) - 10.25em);
 }
 .card-content.half{
-    height: calc(80vh - 10.25em);
-    height: calc((var(--vh, 1vh) * 80) - 10.25em);
+    height: calc(80vh - 10.325em - 40vw);
+    height: calc((var(--vh, 1vh) * 80) - 10.325em - 40vw);
 }
 .card-content:not(.active){
     display:none;

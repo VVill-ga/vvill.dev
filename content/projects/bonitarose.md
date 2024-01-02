@@ -7,15 +7,14 @@ desc:
         imported all of their products from Etsy, and set up the payment system
         to sync with their accounts already using Square for in-person sales.
     - >-
-        In addition to setting up the website, one of my biggest tasks was
-        importing all relevant information from Etsy. I used Python to assemble
-        the new CSV product database and programatically download all product
-        images.
+        One of my biggest tasks for this project was importing all relevant 
+        information from the existing Etsy store. I used Python to assemble
+        the new CSV product database and programmatically download all product
+        images into folders named after the product's SKU.
 
 tags:
     - Webdev
     - Python
-enabelEmoji: true
 nopage: true
 links: 
     - link: https://bonitarosejewelry.com

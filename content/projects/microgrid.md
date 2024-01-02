@@ -18,7 +18,6 @@ desc:
 
 tags:
     - Python
-enabelEmoji: true
 nopage: true
 links: 
     - link: https://replit.com/@Joshua-MM1/ENGR102-Python-Microgrids

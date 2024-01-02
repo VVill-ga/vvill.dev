@@ -15,7 +15,6 @@ desc:
 tags:
     - Webdev
     - vvill.dev
-enabelEmoji: true
 links: 
     - link: https://github.com/VVill-ga/vvill.dev
       text: Github Repo
@@ -28,7 +27,7 @@ date: 2023-12-21
 ## The Story So Far
 
 This website has been a work in progress since... At least back in 2019. 
-It may not look like that much, because really it's not. The biggest challange
+It may not look like that much, because really it's not. The biggest challenge
 that I found in the "building a personal website" project wasn't the website
 itself, but making it personal. This version took me a couple months to figure
 out. However, along the way I went through many learning curves of trying on 
@@ -40,7 +39,7 @@ I'll share as screenshots below.
 ![](/img/garrisow_screenshot.webp "Website published to my school account")
 
 The first image, which sports the header "vvill.ga", was one of my more
-ecentric designs I created back in high school. The binary in the background is 
+eccentric designs I created back in high school. The binary in the background is 
 programmed to repeat until it goes off screen, and it decodes to "PRESS SHIFT 
 SPACE". My plan was to have shift+space redirect to a video game made with 
 Javascript and a canvas element (my bread & butter at the time) which would act 
@@ -57,8 +56,8 @@ introduction to engineering class. CSS was not in the rubric...
 
 My very first domain name might always be my favorite. `.ga` was one of the few
 TLDs that you could register a *free domain name* from for a long time. And it
-also just so happened to be the first two letters of my last name! Unfortunetly
-(Or fortunetly, I haven't looked into the politics of it), the country of Gabon
+also just so happened to be the first two letters of my last name! Unfortunately
+(Or fortunately, I haven't looked into the politics of it), the country of Gabon
 from which the .ga TLD originated, [experienced a coup](https://en.wikipedia.org/wiki/2023_Gabonese_coup_d%27%C3%A9tat)
 and took back all of their domains for the country's use. This lead to my
 purchase of vvill.dev in August of 2023.
@@ -66,15 +65,15 @@ purchase of vvill.dev in August of 2023.
 ---
 
 **P.S.** The website I used to get my free domain was [Freenom](https://www.freenom.com). 
-Unfortunetly, in March of 2023, they were sued by Meta and were forced to stop
+Unfortunately, in March of 2023, they were sued by Meta and were forced to stop
 allowing new domains to be registered. Someone posted an [alternatives list](https://www.reddit.com/r/freenom/comments/16kwmm2/alternatives_to_freenom_megalist/) 
 to the Freenom subreddit for other opportunities to get a free domain name, and 
-I'm particularily fond of the github subdomain options. Any option here will 
+I'm particularly fond of the github subdomain options. Any option here will 
 give you limited control and reliability however.
 \
 \
 A paid domain is only about $10 a year, which I'd suggest moving to as soon as 
-you can. My prefered domain registrar is **[Cloudflare](https://cloudflare.com)**
+you can. My preferred domain registrar is **[Cloudflare](https://cloudflare.com)**
 because they are (to my knowledge) the only ones who don't charge any extra
 registration fees. The "tradeoff" is that you have to use their DNS for your 
 domain, but that would have been a no-brainer anyways.
@@ -135,12 +134,12 @@ you can click on to expand the list and chose from the various post titles. On a
 landscape screen, the items all fall down to the left of the post summary, and 
 you can simply click on each title to see more. It is also programmed such that
 once I have thousands of projects to show off and blog posts written, you can 
-scroll down in the dropdown or in the left pannel to see all the well spaced 
+scroll down in the dropdown or in the left panel to see all the well spaced 
 options.
 \
 \
 Everything gets defined in a Hugo for loop in the html file which pulls out and 
-organizes all the neccessary information about each post. There is one simple 
+organizes all the necessary information about each post. There is one simple 
 JavaScript function I wrote to handle the switching of content and the dropdown 
 menu.
 \
@@ -257,7 +256,7 @@ monospaced "code-font" (both of which I may be replacing soon with GitHub's new
 Monaspace font), and the last one `--vh` is a constantly calculated height unit 
 that takes into account the changing of the bottom bar on some mobile browsers. 
 For some reason, it was impossible to get the gradient at the bottom of the 
-fullscreened image on the homepage to be consistent without it. The calculation 
+full-screen image on the homepage to be consistent without it. The calculation 
 for it is pretty simple:
 
 ```js
@@ -294,12 +293,23 @@ integrate with my site. I am going to wait on implementing this until I have a
 few more posts to play around with so I can decide on what types of filters 
 matter most to me.
 
+### Post Information / Table of Contents
+
+I like it when articles have a table of contents on the side and you can skip
+right to the part that you care about. I also think it might be useful to have a
+specific place to put other metadata about the post. I have yet to implement it,
+but I can see having a section on the right, about 20% of the screen on desktop,
+containing the title, post date, tags, specific credits and links, and a linked
+table of contents for starters. On mobile, it would likely be a dropdown from
+the right side of the top bar. I'd also like to add a progress bar at the bottom
+of the top bar.
+
 ### Dynamically Load Posts
 
 I am a big fan of the up and coming HTMX, and I can already see a critical space
 for it on my website. Currently, the index.html page loads in the description
 and image for every single post, but as I keep making and writing, that's going 
-to be a big network request! Blatent violations of Design Principle 1, 2, and 3!
+to be a big network request! Blatant violations of Design Principle 1, 2, and 3!
 \
 \
 [HTMX](https://htmx.org) will solve these issues, and will be very fun to learn!
@@ -309,7 +319,7 @@ to be a big network request! Blatent violations of Design Principle 1, 2, and 3!
 Well of course I want to spy on you! But of course I don't want you being spied
 on! [Plausible](https://plausible.io) is a lightweight, self-hosted analytics 
 collector allowing me to have my fun numbers without handing them off to Google 
-or sacrifycing your bandwidth with Google's huge codebase.
+or sacrificing your bandwidth with Google's huge codebase.
 
 ### Decentralized Comments
 

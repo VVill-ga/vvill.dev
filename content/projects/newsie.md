@@ -1,6 +1,5 @@
 ---
 title: ":newspaper_roll: Newsie"
-image: /img/newsie.webp
 desc: 
     - >-
         Newsie is a browser-based party game like Kahoot or the Jackbox series
@@ -19,7 +18,6 @@ desc:
 
 tags:
     - Webdev
-enabelEmoji: true
 nopage: true
 links: 
     - link: https://github.com/osu-cs290-f22/final-project-newsie

@@ -11,7 +11,6 @@ desc:
           (on mobile), or the options to the left (on desktop). If you keep 
           scrolling, you'll find overviews of some of my side-projects, 
           and a blog I sometimes write to.
-enabelEmoji: true
 nopage: true
 links: 
     - link: /resume.pdf
