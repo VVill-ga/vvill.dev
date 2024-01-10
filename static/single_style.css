@@ -38,7 +38,8 @@
     display: block;
     margin: 0 auto;
     max-width: 100%;
-    max-height: calc(var(--vh, 1vh) * 50);
+    max-height: 33vh;
+    max-height: calc(var(--vh, 1vh) * 33);
 }
 #container{
     display:flex;
@@ -56,16 +57,15 @@
         }
         text-align: center;
         margin: 1.5em auto;
-        background: var(--1);
+        background: var(--0);
         padding: 0.25em 0.5em;
-        border-top: 0.125em solid var(--0);
-        border-bottom: 0.25em solid var(--0);
+        border-top: 0.125em solid var(--1);
+        border-bottom: 0.125em solid var(--1);
     }
     h3, h4, h5{
         margin-top: 3em;
         width: fit-content;
-        border: 0.125em solid var(--0);
-        border-bottom: 0.25em solid var(--0);
+        border: 0.125em solid var(--1);
     }
     hr{
         border: none;
@@ -129,12 +129,12 @@
 }
 #sidebar{
     width: 30%;
-    background: var(--0);
+    background: var(--1);
     position: -webkit-sticky;
     position: sticky;
     top: 4.625em;
     height: calc(var(--vh, 1vh) * 100);
-    border-left: 0.25em solid var(--1);
+    border-left: 0.25em solid var(--0);
 
     h1{
         text-align: center;
@@ -184,7 +184,7 @@
         width: 100%;
         height: 4.5em;
         border: none;
-        border-bottom: 0.25em solid var(--1);
+        border-bottom: 0.25em solid var(--0);
         overflow: hidden;
         position: static;
     }
