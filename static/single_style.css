@@ -89,16 +89,18 @@
         font-style: italic;
     }
     img{
+        height:100%;
+        max-width: 100%;
+    }
+    p:has(img){
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(10vw, 1fr));
+        overflow: hidden;
         max-width: calc(50vw - 0.5em);
         max-height: 70vh;
         border-radius: 2em;
         border: 0.25em solid var(--0);
-    }
-    p:has(img){
-        max-width: 50vw;
         padding: 0;
-        border: none;
-        border-radius: 0;
         background: transparent;
     }
     code{
@@ -169,9 +171,6 @@
 
         p, ul:not(li ul){
             max-width: calc(80vw - 2.25em);
-        }
-        img{
-            max-width: calc(80vw - 0.5em);
         }
         p:has(img){
             max-width: 80vw;
