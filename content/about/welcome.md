@@ -13,7 +13,7 @@ desc:
           and a blog I sometimes write to.
 nopage: true
 links: 
-    - link: /resume.pdf
+    - link: https://github.com/VVill-ga/VVill-ga/blob/main/resume.pdf?raw=true
       text: My Resume
     - link: mailto:contact@vvill.dev 
       text: contact@vvill.dev
