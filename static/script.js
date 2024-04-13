@@ -72,12 +72,6 @@ function swapContent(e, i){
     e.parentElement.children[i].classList.add("active");
 }
 
-//CSS -vh variable for 100% height minus the bottom nav bar on mobile
-function calcVh(){
-	document.documentElement.style.setProperty('--vh', (window.innerHeight * 0.01) + "px");
-}
-
-
 //Load all the element references to memory and start up functions
 window.onload = function(e){
     //Commands bar at the top
@@ -95,8 +89,4 @@ window.onload = function(e){
         window.addEventListener("scroll", navScroll, false);
         navScroll();
     }
-
-    //Dynamic vh variable
-    window.addEventListener("resize", calcVh, false);
-    calcVh();
 }

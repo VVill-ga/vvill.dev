@@ -29,7 +29,7 @@ body{
 .full {
     width: 100vw;
     height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
+    height: 100dvh;
     max-width: 100%;
     overflow: hidden;
     display: flex;
@@ -43,7 +43,7 @@ body{
 @media (max-aspect-ratio: 3/4) {
     .full img {
         height: 100%;
-        height: calc(var(--vh, 1vh) * 100);
+        height: 100dvh;
     }
 }
 .banner {
@@ -84,7 +84,7 @@ body{
     box-shadow: 0.125em 0.125em var(--1);
     width: 80vw;
     height: calc(80vh - 4.5em);
-    height: calc((var(--vh, 1vh) * 80) - 4.5em);
+    height: calc(80dvh - 4.5em);
     overflow: hidden;
     background: var(--1);
     font-family: var(--code-font);
@@ -157,11 +157,11 @@ body{
     align-items: center;
     justify-content: space-between;
     height: calc(80vh - 10.25em);
-    height: calc((var(--vh, 1vh) * 80) - 10.25em);
+    height: calc(80dvh - 10.25em);
 }
 .card-content.half{
     height: calc(80vh - 10.325em - 40vw);
-    height: calc((var(--vh, 1vh) * 80) - 10.325em - 40vw);
+    height: calc(80dvh - 10.325em - 40vw);
 }
 .card-content:not(.active){
     display:none;
@@ -228,7 +228,7 @@ body{
     .card-index {
         width: 50%;
         height: calc(80vh - 8.5em);
-    	height: calc((var(--vh, 1vh) * 80) - 8.5em);
+        height: calc(80dvh - 8.5em);
     }
     .card-index ul {
         height: 100%;
@@ -256,7 +256,7 @@ body{
     .card-content {
         width: 50%;
         height: calc(80vh - 8.5em);
-    	height: calc((var(--vh, 1vh) * 80) - 8.5em);
+        height: calc(80dvh - 8.5em);
         border-left: 0.125em solid var(--0);
     }
 }
@@ -264,20 +264,20 @@ body{
     .card{
         width: 90vw;
         height: calc(90vh - 4.5em);
-    	height: calc((var(--vh, 1vh) * 90) - 4.5em);
+        height: calc(90dvh - 4.5em);
     }
     .card-content{
         height: calc(90vh - 10.25em);
-    	height: calc((var(--vh, 1vh) * 90) - 10.25em);
+        height: calc(90dvh - 10.25em);
     }
     @media (orientation: landscape) {
         .card-content {
             height: calc(90vh - 8.5em);
-    		height: calc((var(--vh, 1vh) * 90) - 8.5em);
+            height: calc(90dvh - 8.5em);
         }
         .card-index {
             height: calc(90vh - 8.5em);
-    		height: calc((var(--vh, 1vh) * 90) - 8.5em);
+            height: calc(90dvh - 8.5em);
         }
     }
 }
